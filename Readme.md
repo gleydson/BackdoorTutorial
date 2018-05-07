@@ -68,9 +68,83 @@ Para usar como sistema alvo, você poderá escolher qualquer sistema que seja de
 
 ## Prática
 
-Para a realização desta prática, iremos utilizar a ferramenta The Fat Rat, para realizar o download basta clonar o seu repositório:
+Para a realização desta prática, iremos utilizar a ferramenta The Fat Rat.
+
+#### Configuração do NO-IP
+
+Antes de começarmos, iremos configurar um DNS para apontar para a nossa máquina, assim, poderemos executar ataques de qualquer rede. Para isso, precisaremos utilizar algum serviço que consiga dar nome ao nosso ip de forma dinâmica, existem diversos serviços desse tipo, como: Dynu, DNSdynamic, No-IP, DuckDNS, entre outros, porém, iremos utilizar o NO-IP.
+
+Para começar, registre um domíno no site:
+
+    https://www.noip.com/
+
+Agora, você poderá baixar o cliente do no-ip para rodar em sua máquina. Para execução dos comando abaixo, recomendado a utilização de ```sudo su```:
+
+7. ```cd /usr/local/src```
+
+8. ```wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz```
+
+9. ```tar xzf noip-duc-linux.tar.gz```
+
+10. ```cd no-ip-2.1.9```
+
+11. ```make```
+
+12. ```make install```
+
+Caso seja apresentada a seguinte mensagem: ```make not found``` ou ```missing gcc```, será necessário instalar as ferramentas para compilação de código ```C```.
+
+Ainda com permissões ```sudo```, execute o seguinte comando para criar o arquivo de configuração padrão.
+
+13. ```/usr/local/bin/noip2 -C```
+
+Você será solicitado a fornecer seu nome de usuário e senha para o No-IP, bem como qual hosts você deseja utilizar, caso você tenha registrado mais de um.
+
+Agora que o cliente está instalado e configurado, você só precisa iniciá-lo. Basta executar este comando final para iniciar o cliente em segundo plano:
+
+14. ```/usr/local/bin/noip2```
+
+Pronto, agora você poderá usar o nome que você registrou para acesso ao seu computador.
+ 
+#### Configuração do FatRaT
+
+para realizar o download basta clonar o seu repositório:
 
 1. ```git clone https://github.com/Screetsec/TheFatRat.git```
 2. ```cd TheFatRat```
+
+Antes de executar, será necessário configurar o sistema executando a instalação de alguns softwares:  
+
 3. ```chmod +x setup.sh```
 4. ```sudo ./setup.sh```
+
+Após a configuração do ambiente, execute o programa:
+
+5. ```./fatrat```
+
+#### Iniciar a ação
+
+Ao executar o fatrat, esta tela aparecerá para você:
+
+<p align="center">
+    <img src="./src/images/01.png" alt="" width="500px">
+</p>
+
+Aqui, é apresentado diversas opções de criação de payloads para ataques, seja para distribuições linux, windows ou android.
+
+Como o nosso foco é realziar o ataque em um sistema windows, iremos escolher a opção 6.
+
+<p align="center">
+    <img src="./src/images/02.png" alt="" width="500px">
+</p>
+
+Aqui, será mostrado algumas opções de para criar seu payload, recomendamos a seleção da opção 2.
+
+Set LHOST IP
+Set LPORT
+Please enter the base name for output files
+
+https://www.wikihow.com/Create-a-Nearly-Undetectable-Backdoor-using-MSFvenom-in-Kali-Linux
+
+WWW.NODISTRIBUTE.COM
+
