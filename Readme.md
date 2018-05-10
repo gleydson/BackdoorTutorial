@@ -4,14 +4,6 @@
 
 ---
 
-## Sumário
-- [O que é backdoor?](#O-que-é-backdoor?)
-- [Ferramentas](#ferramentas)
-- [Configuração de ambiente](#configuração-de-ambiente)
-- [Prática](#prática)
-
----
-
 ## O que é backdoor?
 
 Backdoor é um recurso oculto em um software que concede um certo nível de acesso ao software para quem estiver ciente desse recurso e geralmente não é de conhecimento do propietário do sistema.
