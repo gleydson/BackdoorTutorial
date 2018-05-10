@@ -40,14 +40,6 @@ Então, em vez de tentar se conectar ao shell que ele colocou na vítima, o inva
 
 Desta forma, é possível obter um backdoor invisível que será ignorado pela maioria dos firewalls.
 
-## Ferramentas
-Existem diversas ferramentas específicas para criação de backdoors, abaixo, estao descritas algumas dessas dessas ferramentas: 
-- [Cryptcat](https://tools.kali.org/maintaining-access/cryptcat)
-- [MsfPayload](https://www.offensive-security.com/metasploit-unleashed/msfpayload/)
-- [The Fat Rat](https://github.com/Screetsec/TheFatRat)
-- [Armitage](https://www.offensive-security.com/metasploit-unleashed/armitage/)
-- [Netcat](https://nmap.org/ncat/)
-
 ## Configuração do ambiente
 
 Para começar a criar seu primeiro backdoor, será necessário que você possua um sistema para realiza o ataque e o sistema para atacar.
