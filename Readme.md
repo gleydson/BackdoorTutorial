@@ -86,12 +86,6 @@ Agora que o cliente está instalado e configurado, você só precisa iniciá-lo.
 
 14. ```/usr/local/bin/noip2```
 
-Você será solicitado a fornecer seu nome de usuário e senha para o No-IP, bem como quais nomes de host você deseja atualizar. Tenha cuidado, uma das perguntas é "Você deseja atualizar todos os hosts". Se respondido incorretamente, isso pode afetar nomes de host em sua conta que estão apontando para outros locais.
-
-Agora que o cliente está instalado e configurado, você só precisa iniciá-lo. Basta emitir este comando final para iniciar o cliente em segundo plano:
-
-    /usr/local/bin/noip2
-
 ## Prática
 
 #### Realizando ataque em python
