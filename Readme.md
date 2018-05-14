@@ -3,7 +3,8 @@
 </p>
 
 ---
-
+Equipe: Ernandes Azevedo Junior e Gleydson da Silva Rodrigues 
+        
 ## O que é backdoor?
 
 Backdoor é um recurso oculto em um software que concede um certo nível de acesso ao software ou sistema para quem estiver ciente desse recurso. Geralmente não é de conhecimento do propietário do sistema.
@@ -62,29 +63,24 @@ Para começar, registre um domíno no site:
 
 Agora, você poderá baixar o cliente do no-ip para rodar em sua máquina. Para execução dos comando abaixo, recomendado a utilização de ```sudo su```:
 
-7. ```cd /usr/local/src```
-
-8. ```wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz```
-
-9. ```tar xzf noip-duc-linux.tar.gz```
-
-10. ```cd no-ip-2.1.9-1```
-
-11. ```make```
-
-12. ```make install```
+1. ```cd /usr/local/src```
+2. ```wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz```
+3. ```tar xzf noip-duc-linux.tar.gz```
+4. ```cd no-ip-2.1.9-1```
+5. ```make```
+6. ```make install```
 
 Caso seja apresentada a seguinte mensagem: ```make not found``` ou ```missing gcc```, será necessário instalar as ferramentas para compilação de código ```C```.
 
 Ainda com permissões ```sudo```, execute o seguinte comando para criar o arquivo de configuração padrão.
 
-13. ```/usr/local/bin/noip2 -C```
+7. ```/usr/local/bin/noip2 -C```
 
 Você será solicitado a fornecer seu nome de usuário e senha para o No-IP, bem como qual hosts você deseja utilizar, caso você tenha registrado mais de um.
 
 Agora que o cliente está instalado e configurado, você só precisa iniciá-lo. Basta executar este comando final para iniciar o cliente em segundo plano:
 
-14. ```/usr/local/bin/noip2```
+8. ```/usr/local/bin/noip2```
 
 ## Prática
 
